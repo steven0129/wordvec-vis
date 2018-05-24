@@ -27,7 +27,7 @@ for index, value in tqdm(enumerate(newValues)):
 kmeans = KMeans(n_clusters=6, verbose=2).fit(XYZ)
 
 with open('result.csv', 'w') as f:
-    f.write('Label,X,Y,Z,Clsuter\n')
+    f.write('Label,X,Y,Z,Cluster\n')
     for index, value in enumerate(kmeans.labels_):
         X = XYZ[index][0]
         Y = XYZ[index][1]
